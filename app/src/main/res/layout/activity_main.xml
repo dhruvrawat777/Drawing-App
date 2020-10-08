@@ -19,7 +19,6 @@
     >
     <ImageView
         android:id="@+id/iv_background"
-        android:src="@drawable/image"
         android:contentDescription="Background image"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
@@ -42,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/fl_drawing_view_container"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/ib_brush"
+        app:layout_constraintBottom_toTopOf="@+id/ll_action_buttons"
         android:orientation="horizontal">
 
         <ImageButton
@@ -141,15 +140,37 @@
 
     </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/ib_brush"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_brush"
-        android:layout_margin="5dp"
+    <LinearLayout
+        android:id="@+id/ll_action_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:scaleType="fitXY"
-        android:contentDescription="brush image"/>
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/ib_gallery"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_gallery"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:contentDescription="Gallery image"/>
+
+        <ImageButton
+            android:id="@+id/ib_brush"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_brush"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:contentDescription="brush image"/>
+
+
+    </LinearLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
